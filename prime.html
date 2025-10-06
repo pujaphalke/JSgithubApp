@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+     
+     function checkPrime()
+     {
+        let a= document.getElementById("num1").value;
+        console.log(a);
+
+        var count=0;
+        for(let i=1; i<=a;i++)
+      {
+        if(a%i==0)
+      {
+        count++;
+        console.log(`factors of ${a} : ${i}`);
+      }
+     }
+     if(count===2)
+     {
+        console.log(`count is ${count}`);
+        console.log(`${a} is a Prime Number.`);
+        document.getElementById("result").innerHTML=`${a} is a Prime Number.`;
+     }
+     else{
+        console.log(`count is ${count}`);
+        console.log(`${a} is a NotPrime Number.`);
+        document.getElementById("result").innerHTML=`${a} is a NotPrime Number.`;
+     }
+    }
+    
+    function checkeven()
+   {
+    var x= document.getElementById("num1").value;
+    console.log(x);
+
+    if(x%2==0)
+    {
+        console.log(`${x} is Even Number.`);
+     document.getElementById("result").innerHTML=`${x} is Even Number.`;
+    }
+    else{
+        console.log(`${x} is Odd Number.`);
+        document.getElementById("result").innerHTML=`${x} is Odd Number.`;
+    }
+   }
+   
+   function checkpositive()
+    {
+    var y= document.getElementById("num1").value;
+    console.log(y);
+
+    if(y>0)
+    {
+        console.log(`${y} is Positive Number.`);
+        document.getElementById("result").innerHTML=`${y} is Positive Number.`;
+    }
+    else if(y<0)
+    {
+        console.log(`${y} is Negative Number.`);
+        document.getElementById("result").innerHTML=`${y} is Negative Number.`;
+    }else
+    {
+        console.log(`${y} is Neutral Number.`);
+         document.getElementById("result").innerHTML=`${y} is Neutral Number.`;
+    }
+    }
+     
+    function makesquare()
+{
+    var z= document.getElementById("num1").value;
+    console.log(z);
+
+   const sq =z*z;
+   console.log(` Square of ${z} is ${sq}`);
+   document.getElementById("result").innerHTML=` Square of ${z} is ${sq}.`;
+}
+
+  function makecube()
+{
+    var c= document.getElementById("num1").value;
+    console.log(c);
+
+   const cu =c*c*c;
+   console.log(` Cube of ${c} is ${cu}`);
+   document.getElementById("result").innerHTML=` Cube of ${c} is ${cu}.`;
+}
+
+ function table()
+{
+    var t= document.getElementById("num1").value;
+    console.log( ` Table of ${t} :`);
+  
+    for(let i=1; i<=10; i++)
+{ 
+     const res=t*i;
+     console.log(`${t} * ${i}= ${res}`);
+}
+   
+   document.getElementById("result").innerHTML= ``;
+ }
+
+
+    </script>
+</head>
+<body>
+    Enter Number: <input type="number" id="num1"> <br><br>
+    
+    <button onclick="checkPrime()">CheckPrime</button> <br><br>
+    <button onclick="checkeven()">CheckEven</button>  <br><br>
+    <button onclick="checkpositive()">CheckPositive</button> <br><br>
+    <button onclick="makesquare()">Square</button>  <br><br>
+    <button onclick="makecube()">Cube</button>  <br><br>
+    <button onclick="table()">Table</button>  <br><br>
+
+    <h2 id="result">Result:</h2>
+</body>
+</html>
