@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//object
+
+let o1={ rollno : 1, name : "abc"}
+let o2= { ...o1, mail : "abc@gmail.com"}
+
+console.log(o1);   //print 1st
+for(let k in o1)   //itrate 1st object
+{
+    console.log(k+" "+o1[k]);
+}
+console.log(o2);     //print 2nd
+for(let key in o2)   //itrate 2nd object
+{
+    console.log(key+" "+o2[key]);
+}
+
+//Array
+
+let num1= [10,20,30]; 
+let num2= [100,200,...num1,300];
+
+let num3=[...num1, ...num2];
+
+console.log(num1);
+console.log(num2);
+console.log(num3);
+
+for(let main of num3)
+{
+     console.log(main);
+}
+
+/////////////////////////
+
+let address= {
+    areaname : "warje",
+    cityname : "pune"
+}
+let bank ={
+    bname : "BOM",
+    branch : "pune",
+    accNo : 1025,
+    accType : "saving"
+}
+
+let company ={
+    cname : "Transor india",
+    caddress : "pirangut",
+    ctype : "Privately held"
+}
+
+let employee={
+     eid : 1,
+    ename : "pravin",
+    ...address,...company,...bank
+}
+
+console.log(employee);
+
+let{ename,cname,bname}=employee;
+console.log(ename);
+console.log(cname);
+console.log(bname);
+
+
+
+
+    </script>
+</body>
+</html>

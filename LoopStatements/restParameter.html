@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Rest parameter store values in array
+      let arr=[1,2,3,4,5];
+        function add(...arr)
+        {
+         for(let element of arr)
+         {
+          console.log(element);
+         }
+        }
+        add(arr);
+//////////////////////////////////
+
+        function sum(...arr1)
+        {
+            sum=0;
+         for(let element of arr1)
+         {
+          sum=sum+element;
+         }
+         console.log(`Sum of elements = ${sum}`);
+        }
+        sum(...arr);
+////////////////////////////////////////
+        function evenOdd(...num)
+        {
+          for(let element of num)
+          {
+             if(element%2==0)
+             {
+             console.log(`${element} is Even Number.`);
+             }else{
+                console.log(`${element} is Odd Number.`);
+             }
+          }
+        }
+        evenOdd(...arr);
+/////////////////////////////////
+       console.log("Vowels and Consonants.");
+       
+        let arr1= ['A', 'b', 'e', 'i', 's','t'];
+
+        function findVowels(...char)
+        {
+        for(let c of char)
+        {
+         if(c==='a' || c==='e' || c==='i' || c==='o' || c==='u'||c==='A' || c==='E' || c==='I' || c==='O' || c==='U')
+         {
+         console.log(`${c} is Vowel character.`);
+         }else{
+            console.log(`${c} is Consonant character.`);
+         }
+        }
+        }
+        findVowels(...arr1);
+
+
+    </script>
+</body>
+</html>
